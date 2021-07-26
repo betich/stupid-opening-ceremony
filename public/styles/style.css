@@ -1,0 +1,144 @@
+:root {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+@media screen and (min-width: 450px) {
+	:root {
+		font-size: 16px;
+	}
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: #00B7FF;
+}
+
+@keyframes disco {
+	from {
+		filter: hue-rotate(0deg) saturate(250%) contrast(105%);
+	}
+	to {
+		filter: hue-rotate(360deg) saturate(250%) contrast(105%);
+	}
+}
+
+#scene-container {
+	background-image: url("/public/bg.webp"), url("/public/bg.png");
+	background-color: #3300ee;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	z-index: -1;
+	filter: hue-rotate(0deg) saturate(250%) contrast(105%);
+	animation: disco 5s ease-in-out 0s infinite;
+	overflow: hidden;
+}
+
+#astro {
+	position: fixed;
+	height: auto;
+	width: 220px;
+	bottom: 30vh;
+	left: 0;
+}
+
+.motif {
+	position: absolute;
+	top: 10rem;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.5rem;
+	color: #eee;
+}
+
+.motif::before,
+.motif::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.motif::before {
+	/* ... anything needed to make it identical */
+	/* variation */
+	left: 2px;
+	text-shadow: -1px 0 red;
+	/* important: opaque background masks the original */
+	background: #333;
+}
+
+.motif::after {
+	/* ... anything needed to make it identical */
+	/* variation */
+	left: -2px;
+	text-shadow: -1px 0 blue;
+	/* important: opaque background masks the original */
+	background: #332;
+}
+
+#progress-percent {
+	position: absolute;
+	top: 3rem;
+	right: 3rem;
+	font-size: 1.5rem;
+	color: #eee;
+}
+
+#progress-slash {
+	position: absolute;
+	top: 6rem;
+	right: 3rem;
+	font-size: 1.5rem;
+	color: #eee;
+}
+
+#fire-container {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/public/fire.gif");
+	background-color: #e10303;
+	background-repeat: none;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+#confetti-container {
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/public/confetti.gif");
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.success-helper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #eee;
+	font-size: 1.75rem;
+	text-align: center;
+	width: 70vw;
+	z-index: 2;
+}
+
+h1,
+p,
+a {
+	margin: 0;
+	padding: 0;
+}
