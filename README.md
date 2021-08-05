@@ -2,6 +2,11 @@
 
 This is a simulation of how the opening ceremony went.
 
+![first page](https://user-images.githubusercontent.com/28398789/128280201-89bf301d-26b6-44e7-8287-d565857c3c1a.png)
+
+![second page](https://user-images.githubusercontent.com/28398789/128280224-f721e0ab-92ea-48b9-b961-65c71568a7bf.png)
+
+
 ## The First Scene
 
 ### How was the animation done?
